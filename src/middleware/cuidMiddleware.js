@@ -2,8 +2,8 @@ const cuid = require('cuid');
 
 const cuidMiddleware = (req, res, next) => {
   const requestId = cuid();
-  req.id = requestId;
-  res.id = requestId;
+  req.locals.requestId = requestId;
+  res.locals.requestId = requestId;
 
   next();
 };
