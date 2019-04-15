@@ -2,8 +2,12 @@ const express = require('express');
 
 const app = express();
 
+const cuidMiddleware = require('./middleware/cuidMiddleware');
+
+app.use(cuidMiddleware);
+
 app.get('/', (req, res) => {
-  res.send('\n\nHello, world!\n\n');
+  res.send('Hello, world!');
 });
 
 module.exports = app;
