@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/**/*.js"
+    "start": "cross-env NODE_PATH=src node src/server.js",
+    "test": "cross-env NODE_PATH=src node src/test/app.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cuid": "^2.1.6",
     "dotenv": "^7.0.0",
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "supertest": "^4.0.2",
     "tape": "^4.10.1"
   }
